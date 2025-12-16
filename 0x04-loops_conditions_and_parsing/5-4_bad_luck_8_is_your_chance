@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# Displays custom messages for loop iterations 4 and 8, and "Best School" otherwise
+
+# Initialize a counter
+I=1
+
+# Loop from 1 to 10
+while [ "$I" -le 10 ]; do
+    if [ "$I" -eq 4 ]; then
+        # Check for the 4th iteration
+        echo "bad luck"
+    elif [ "$I" -eq 8 ]; then
+        # Check for the 8th iteration
+        echo "good luck"
+    else
+        # For all other iterations
+        echo "Best School"
+    fi
+
+    # Increment the counter
+    I=$((I + 1))
+done
