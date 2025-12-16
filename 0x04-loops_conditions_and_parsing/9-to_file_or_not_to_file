@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+# Checks for the existence, emptiness, and type of a file named 'school'
+
+FILENAME="school"
+
+# Check for existence of the file
+if [ -e "$FILENAME" ]; then
+    echo "$FILENAME file exists"
+
+    # If the file exists, perform further checks
+    if [ -s "$FILENAME" ]; then
+        # -s: True if file exists and has a size greater than zero (not empty)
+        echo "$FILENAME file is not empty"
+    else
+        # If -s is false, the file exists but is empty
+        echo "$FILENAME file is empty"
+    fi
+
+    if [ -f "$FILENAME" ]; then
+        # -f: True if file exists and is a regular file
+        echo "$FILENAME is a regular file"
+    # If it is not a regular file (e.g., a directory), do nothing as required
+    fi
+else
+    # The file does not exist
+    echo "$FILENAME file does not exist"
+fi
