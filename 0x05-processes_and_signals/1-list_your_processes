@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Displays a comprehensive, hierarchical list of all running processes
+
+ps -efH
