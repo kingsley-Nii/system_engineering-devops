@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
-# Runs an infinite loop that ignores SIGTERM, printing "I am invincible!!!" instead
+# This script displays 'To infinity and beyond' 
+# Expectations: In between each iteration of the loop, add a sleep 2
 
-# Use trap to catch the SIGTERM signal (signal 15) and run a command instead of exiting
-trap 'echo "
-
-while true; do
+trap 'echo "I am invincible!!!"' SIGTERM
+while true
+do
     echo "To infinity and beyond"
     sleep 2
 done
