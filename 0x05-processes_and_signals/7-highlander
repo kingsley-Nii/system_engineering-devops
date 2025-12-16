@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 # Runs an infinite loop that ignores SIGTERM, printing "I am invincible!!!" instead
 
-# The trap command catches the SIGTERM signal (15) and executes 
-# 'echo "I am invincible!!!"' instead of terminating the script.
+# Use the trap command to catch SIGTERM (signal 15) and run a command instead of exiting
 trap 'echo "I am invincible!!!"' SIGTERM
 
 while true; do
