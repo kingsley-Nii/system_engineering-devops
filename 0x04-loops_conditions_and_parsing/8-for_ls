@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Lists files in the current directory and displays the part of the name after the first dash
+
+# Loop through all non-hidden files/directories (* does not include hidden files starting with .)
+for FILENAME in *; do
+    # The string manipulation ${FILENAME#*-} removes the shortest part
+    # of the string from the beginning up to the first occurrence of '-'
+    echo "${FILENAME#*-}"
+done
