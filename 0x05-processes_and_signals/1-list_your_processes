@@ -1,4 +1,11 @@
 #!/usr/bin/env bash
-# Displays a comprehensive, hierarchical list of all running processes
+# File: 1-list_your_processes
+# Description: Displays a comprehensive, user-oriented, and hierarchical list of all running processes.
 
-ps -efH
+# ps: Process Status
+# a: Show processes for all users
+# u: Display in a user-oriented format (shows USER, %CPU, %MEM, etc.)
+# x: Include processes without a controlling terminal (TTY), like system daemons
+# f: Display the process hierarchy in an ASCII art format (shows parent/child relationships with indentation)
+
+ps auxf
