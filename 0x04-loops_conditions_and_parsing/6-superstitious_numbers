@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+# Displays numbers 1 to 20 with specific "bad luck" messages for 4, 9, and 17
+
+# Initialize a counter
+NUM=1
+
+# Loop from 1 to 20
+while [ "$NUM" -le 20 ]; do
+    # Use a case statement based on the current number
+    case "$NUM" in
+        4)
+            echo "$NUM"
+            echo "bad luck from China"
+            ;;
+        9)
+            echo "$NUM"
+            echo "bad luck from Japan"
+            ;;
+        17)
+            echo "$NUM"
+            echo "bad luck from Italy"
+            ;;
+        *)
+            # Default case: just print the number
+            echo "$NUM"
+            ;;
+    esac
+
+    # Increment the counter
+    NUM=$((NUM + 1))
+done
