@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Displays "Best School" 10 times, with "Hi" on the 9th iteration
+
+# Initialize a counter
+COUNT=1
+
+# Loop as long as COUNT is less than or equal to 10
+while [ "$COUNT" -le 10 ]; do
+    # Print "Best School" in every iteration
+    echo "Best School"
+
+    # Check if the current iteration is the 9th
+    if [ "$COUNT" -eq 9 ]; then
+        echo "Hi"
+    fi
+
+    # Increment the counter
+    COUNT=$((COUNT + 1))
+done
